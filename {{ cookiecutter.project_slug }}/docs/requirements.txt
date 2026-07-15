@@ -1,0 +1,4 @@
+# Default extensions
+{{ cookiecutter._requirements | join('\n') }}
+
+# Project-specific extensions
