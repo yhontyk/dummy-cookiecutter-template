@@ -1,15 +1,24 @@
 {
   "project_name": "Canonical Documentation",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+  "html_title": "{{ cookiecutter.project_name }}",
   "author": "Canonical Ltd.",
+  "copyright": "Canonical Ltd.",
   "github_url": "",
   "repo_default_branch": "main",
+  "repo_folder": "/docs/",
   "product_page": "",
+  "product_tag": "",
   "discourse_url": "",
   "mattermost_url": "",
   "matrix_url": "",
   "license_name": "",
   "license_url": "",
+  "ogp_site_url": "",
+  "ogp_site_name": "{{ cookiecutter.project_name }}",
+  "ogp_image": "",
+  "html_favicon": "/static/favicon.png",
+  "llms_txt_description": "Documentation for {{ cookiecutter.project_name }}",
   "display_contributors": [
     "True",
     "False"
@@ -29,21 +38,22 @@
     "False"
   ],
   "source_edit_link_url": "",
-  "disable_feedback_button": [
-    "True",
-    "False"
-  ],
   "enable_manpages": [
     "True",
     "False"
   ],
   "ubuntu_codename": "noble",
+  "sitemap_url_scheme": "https",
+  "sitemap_show_lastmod": [
+    "True",
+    "False"
+  ],
   "_requirements": [
     "# Canonical theme (still needed for Furo theme and custom templates)",
-    "canonical-sphinx~=0.6",
+    "canonical-ulwazi-theme~=1.1",
     "",
     "# Extensions previously auto-loaded by canonical-sphinx",
-    "myst-parser~=4.0",
+    "myst-parser~=4.5",
     "sphinx-autobuild",
     "sphinx-design==0.6.1",
     "sphinx-notfound-page~=1.1",
@@ -68,7 +78,6 @@
     "sphinxcontrib-svg2pdfconverter[CairoSVG]~=2.1",
     "sphinx-last-updated-by-git~=0.3",
     "sphinx-sitemap~=2.9",
-    "sphinx-llm~=0.4",
     "",
     "# Vale dependencies",
     "rst2html",
@@ -101,24 +110,49 @@
     "docs/_templates",
     "docs/_dev"
   ],
+  "_cruft_skip": [
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "docs/.custom_wordlist.txt",
+    "docs/contribute",
+    "docs/explanation",
+    "docs/how-to",
+    "docs/index.rst",
+    "docs/reference",
+    "docs/redirects.txt",
+    "docs/release-notes",
+    "docs/tutorials"
+  ],
   "__prompts__": {
     "project_name": "Project name",
+    "html_title": "HTML page title for sidebar",
     "author": "Author or organization name",
+    "copyright": "Copyright statement",
     "github_url": "GitHub repository URL (e.g., https://github.com/your-org/your-repo)",
     "repo_default_branch": "Default git branch name",
+    "repo_folder": "Documentation folder path (e.g., /docs/)",
     "product_page": "Product page URL (can be different from documentation URL)",
+    "product_tag": "Product tag image URL for page header (optional)",
     "discourse_url": "Discourse community URL (leave empty if not applicable)",
     "mattermost_url": "Mattermost chat URL (leave empty if not applicable)",
     "matrix_url": "Matrix chat URL (leave empty if not applicable)",
     "license_name": "License name (use SPDX identifier format, e.g., CC-BY-4.0)",
     "license_url": "License URL",
+    "ogp_site_url": "Open Graph site URL for social media previews",
+    "ogp_site_name": "Open Graph site name for social media previews",
+    "ogp_image": "Open Graph image URL for social media previews",
+    "html_favicon": "Path to favicon file",
+    "llms_txt_description": "Description for LLM context (llms.txt)",
     "display_contributors": "Display list of contributors?",
     "github_issues_enabled": "Enable feedback through GitHub issues?",
     "sequential_nav": "Navigation style for Previous/Next buttons",
     "enable_source_edit_link": "Enable edit button on pages?",
     "source_edit_link_url": "URL for the edit link (e.g., https://github.com/your-org/your-repo/blob/main/docs)",
-    "disable_feedback_button": "Disable feedback button?",
     "enable_manpages": "Enable links to Linux man pages?",
-    "ubuntu_codename": "Ubuntu LTS release codename for man pages (e.g., noble)"
+    "ubuntu_codename": "Ubuntu LTS release codename for man pages (e.g., noble)",
+    "sitemap_url_scheme": "Sitemap URL scheme (http or https)",
+    "sitemap_show_lastmod": "Include last modification dates in sitemap?"
   }
 }

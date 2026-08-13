@@ -1,0 +1,6 @@
+[tool.cruft]
+skip = [
+{% for path in cookiecutter._cruft_skip -%}
+  "{{ path }}"{% if not loop.last %},{% endif %}
+{% endfor -%}
+]
