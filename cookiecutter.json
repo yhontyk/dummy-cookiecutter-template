@@ -80,7 +80,6 @@
     "sphinx-sitemap~=2.9",
     "",
     "# Vale dependencies",
-    "rst2html",
     "vale~=3.13"
   ],
   "_sphinx_extensions": [
