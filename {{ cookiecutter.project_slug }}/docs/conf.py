@@ -5,7 +5,6 @@ import textwrap
 project = "{{ cookiecutter.project_name }}"
 author = "{{ cookiecutter.author }}"
 copyright = f"{datetime.date.today().year}"
-compliance_statement = "{{ compliance.statement }}"
 
 # Sidebar documentation title
 # To disable the title, set it to an empty string.
