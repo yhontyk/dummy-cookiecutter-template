@@ -50,7 +50,7 @@
   ],
   "_requirements": [
     "# Canonical theme (still needed for Furo theme and custom templates)",
-    "canonical-ulwazi-theme~=1.1",
+    "canonical-ulwazi-theme~=1.2",
     "",
     "# Extensions previously auto-loaded by canonical-sphinx",
     "myst-parser~=4.7",
